@@ -80,6 +80,7 @@ if [ ! -d /usr/src/sofia-sip ]; then
 	./configure --enable-debug
 	make -j $(getconf _NPROCESSORS_ONLN)
 	make install
+	ldconfig
 fi
 
 # spandsp - dependency for switch versions greater than 1.10.0
