@@ -56,6 +56,7 @@ if [ ! -d /usr/src/libks ]; then
 	cmake .
 	make -j $(getconf _NPROCESSORS_ONLN)
 	make install
+	ldconfig
 
 	# libks C includes
 	export C_INCLUDE_PATH=/usr/include/libks
